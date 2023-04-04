@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="lib/styles/styles.css" />
+    <link rel="stylesheet" href="lib/styles/material_theme/colors.module.css" />
+    <link rel="stylesheet" href="lib/styles/material_theme/theme.css" />
+    <link rel="stylesheet" href="lib/styles/material_theme/theme.dark.css" />
+    <link rel="stylesheet" href="lib/styles/material_theme/theme.light.css" />
+    <link rel="stylesheet" href="lib/styles/material_theme/tokens.css" />
+    <link rel="stylesheet" href="lib/styles/material_theme/typography.module.css" />
+    <title>Learn the module</title>
+  </head>
+  <body>
+    <div class="container primary">
+      <h2>Learn the module</h2>
+      <p>
+        This page explains the basic overview of the module. In this article, the usage every item and every servlet is listed. Thorough comprehension
+        of this textual description will enable students grasp the concept, architecture used, design, and logic behind the working of the webapp.
+      </p>
+    </div>
+
+    <div class="container primary-container learn-container">
+      <h3>Let's start with the basics</h3>
+      <p>
+        This is a simple webapp that uses the database, servlet, and jsp at the backend to cater to the request of the client, which is on the
+        frontend. The user sends the request to the server and servlets are their to handle the request. The servlet may dispatch its request to
+        another servlet or jsp page, or may access a database if required.
+      </p>
+      <p>
+        I have used the basic Student Management webapp to illustrate the usage of almost all the technologies listed in the "Internet Technologies"
+        syllabus.
+      </p>
+      <p>
+        A student has roll number, name, address, and phone number as its attributes, I tried to play with. Some basic operations are done to the
+        student relation stored on the database. These operations include: inserting, searching, deleting, and updating a single or multiple records
+        in the backend database.
+      </p>
+    </div>
+    <div class="container primary-container learn-container">
+      <h3>DBValues</h3>
+      <p>
+        This model class contains the collection of all the constants, which this web app intends to use frequently. The constants make is a lot
+        easier to make some changes in the future or adapt the codebase on another system with different preferences. It provides code the power of
+        reusability.
+      </p>
+    </div>
+
+    <div class="container primary-container learn-container">
+      <h3>Student</h3>
+      <p>
+        This model class is a typical objective representation of a student. This class follows the norms, so it could be called a Bean, more
+        specifically a Java Bean.
+      </p>
+    </div>
+
+    <div class="container primary-container learn-container">
+      <h3>ConnectDB</h3>
+      <p>
+        ConnectDB is a helper and singleton class which gives us the reference of connection to database, that is it. It is a class which, if the
+        connection is not set as for first time, creates a new connection to database and returns connection reference back.
+      </p>
+      <p>It is compulsory to have a basic understanding of JDBC in order to get the most out of this class's code.</p>
+    </div>
+
+    <div class="container primary-container learn-container">
+      <h3>Validator</h3>
+      <p>Validator is a class in which there are many functions that actually do validation in backend of the data sent by the user on frontend.</p>
+      <p>For example, it checks if the roll number conforms with the parameters set by the developer.</p>
+    </div>
+
+    <div class="container primary-container learn-container">
+      <h3>Dispatchers</h3>
+      <p>This class provides the function of dispatching the message to the error.jsp or success.jsp page on error or success event respectively.</p>
+      <p>
+        It also sends the desired description of message to the respective page, so the page could handle each error or success scenario differently.
+      </p>
+    </div>
+
+    <div class="container primary-container learn-container">
+      <h3>ShowAllServlet</h3>
+      <p>
+        As the name implies, the function of this servlet is to list all the students enrolled in the database. This servlet only generates the sql
+        query and dispatches that query to the SearchShowServlet, which gets the list of students from the database and dispatches the list to the
+        search.jsp file to make them available to show on the frontend. So there are two dispatches made before the data, to show on client side, is
+        generated.
+      </p>
+    </div>
+
+    <div class="container primary-container learn-container">
+      <h3>SearchServlet</h3>
+      <p>
+        This is the servlet responsible for the searching of student(s) on the basis of his/her/their attributes. This servlet also only generates the
+        sql query and dispatches that query to the SearchShowServlet, which inturn sends the list of students to search.jsp page.
+      </p>
+      <p>
+        Actually, ShowAllServlet and SearchServlet work similarly. They both generate the desired sql query and send the query to the same
+        SearchShowServlet.
+      </p>
+    </div>
+
+    <div class="container primary-container learn-container">
+      <h3>SearchShowServlet</h3>
+      <p>
+        This servlet takes as input the sql query from either ShowAllServlet or SearchServlet and processes the query to generate the list of
+        students. Then the list of students is forwarded to the search.jsp, which generates the page to be shown on the client's browser window.
+      </p>
+      <div class="img-container">
+        <img src="lib/assets/images/search-show-diagram.png" class="diagram-inside-container" alt="Diagram of Search and Show Servlets" />
+      </div>
+      <p>
+        A picture is worth a thousand words. The diagram shows the flow of the code. ShowAllServlet and SearchServlet both make their respective sql
+        query and pass the query to SearchShowServlet which forwards the generated student list to the search.jsp page.
+      </p>
+    </div>
+
+    <div class="container primary-container learn-container">
+      <h3>InsertServlet, DeleteServlet, and UpdateServlet servlets</h3>
+      <p>
+        These servlets insert a record into, delete record(s) from, and update an existing record in the database. They are pretty straight forward.
+        They generate and execute their respective sql query and if in between any error occurs, the error message and description is sent to the
+        handler of the errors, error.jsp. Otherwise if all goes well and as per the expected, the message and description of the success scenario is
+        sent to the handler of success, success.jsp.
+      </p>
+    </div>
+
+    <div class="container primary-container learn-container button-container">
+      <h3>Flowchart of the modules</h3>
+      <p>
+        Here is the flowchart of the module. It can help in understanding the flow of the operations of the webapp. I highly recommend to give it a
+        earnest look, so readers mind could make a set of connections on, how this actually work.
+      </p>
+      <a href="lib/assets/internetTechnologiesWebApp.pdf">
+        <div class="container secondary learn-the-module">
+          <h4>FlowChart</h4>
+          <img class="icons" src="lib/assets/images/expand.svg" alt="next" id="next-icon" />
+        </div>
+      </a>
+    </div>
+    <div class="container error-container learn-container">
+      <h3>Note</h3>
+      <p>
+        The environment for the execution is not hard to set up, if all the technologies and tools, which I used, are mentioned. So let me list them
+        all.
+      </p>
+      <ul>
+        <li>
+          <b>java</b>
+
+          <ul>
+            <li>java 19.0.2 2023-01-17</li>
+            <li>Java(TM) SE Runtime Environment (build 19.0.2+7-44)</li>
+            <li>Java HotSpot(TM) 64-Bit Server VM (build 19.0.2+7-44, mixed mode, sharing)</li>
+          </ul>
+        </li>
+
+        <li>
+          <b>Tomcat</b>
+
+          <ul>
+            <li>Server version: Apache Tomcat/10.1.7</li>
+            <li>Architecture: amd64</li>
+            <li>JVM Version: 19.0.2+7-44</li>
+            <li>JVM Vendor: Oracle Corporation</li>
+          </ul>
+        </li>
+
+        <li>
+          <b>Database</b>
+          <ul>
+            <li>MySQL</li>
+            <li>Workbench 8.0</li>
+            <li>Version 8.0.32 (64 bts) Community</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
