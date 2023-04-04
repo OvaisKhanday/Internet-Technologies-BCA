@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.responsive {
+  /* display: block; */
+  padding: 12px;
+}
+.responsive .gallery {
+  border: 2px solid #ccc;
+}
+.gallery img {
+  width: 100%;
+}
+.gallery .desc {
+  text-align: center;
+  padding: 12px;
+}
+.gallery:hover {
+  border: 2px solid #222;
+}
+@media only screen and (min-width: 768px) {
+  .responsive {
+    float: left;
+    width: 49.9999%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .responsive {
+    float: left;
+    width: 24.9999%;
+  }
+}
+
+button {
+  background-color: #777;
+  color: white;
+  border-style: none;
+  padding: 10px;
+  /* width: 200px; */
+  border-radius: 10px;
+}
+button:hover {
+  background-color: red;
+}
+.clearfix:before {
+  content: "";
+  clear: both;
+  display: table;
+}
+.clearfix {
+  margin: auto;
+}

@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "digital 7";
+  src: url("../assets/fonts/digital-7.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "digital 7", sans-serif, serif;
+}
+body {
+  background: linear-gradient(to bottom, white, rgb(212, 212, 212));
+  height: 100vh;
+  width: 100vw;
+  padding: 20px 10px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  background: linear-gradient(to bottom, #240b36, #c31432);
+  min-height: 50vh;
+  max-width: 600px;
+  max-height: 350px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0px 5px 8px 5px grey;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+#clock {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+.back-to-index {
+  position: relative;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border-style: none;
+  box-shadow: 0px 5px 8px 3px grey;
+  background-color: cadetblue;
+  cursor: pointer;
+  color: white;
+  /* display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* text-align: center; * /
+  font-size: 3rem; */
+}
+.back-to-index > span {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .wrapper {
+    min-height: 80vh;
+    max-height: 350px;
+  }
+}
+
+.timer {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: center;
+  max-width: 600px;
+  border-radius: 30px;
+  /* background-color: grey; */
+  border: 2px solid white;
+  background: linear-gradient(to right, #06beb6, #48b1bf);
+  padding: 10px;
+  box-shadow: 0 0 10px black;
+}
+#input-label,
+#input-minutes,
+#input-submit,
+#time-reached,
+#timer-for {
+  /* background-color: white; */
+  padding: 5px;
+  border-style: none;
+  color: black;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+#input-minutes {
+  border-style: solid;
+  border-radius: 10px;
+  width: 120px;
+}
+#input-submit {
+  margin-left: 5px;
+  padding: 7px 12px;
+  background: linear-gradient(to right, #240b36, black);
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+#input-submit:hover {
+  transform: scale(1.1);
+}
+#time-remaining,
+#time-reached {
+  /* display: block; */
+  display: none;
+  text-align: center;
+  transition: display 1s ease;
+}
+#input-time-remained {
+  width: 100%;
+}

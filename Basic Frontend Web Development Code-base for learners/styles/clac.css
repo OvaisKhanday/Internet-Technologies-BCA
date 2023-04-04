@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+}
+body {
+  background-color: rgba(255, 166, 0, 0.103);
+  /* remove blue highlight when tapping links in mobile */
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  -webkit-tap-highlight-color: transparent;
+}
+.orientation-landscape-mobile {
+  padding: 30px 35px 30px 35px;
+  background: linear-gradient(to right, rgb(206, 13, 13), rgb(216, 116, 22));
+  font-size: 2rem;
+  border-radius: 20px;
+  width: 450px;
+  height: 200px;
+  color: white;
+  text-align: center;
+  display: none;
+  margin: auto;
+}
+.wrapper {
+  height: 100vh;
+}
+aside {
+  padding: 10px;
+  width: 340px;
+  margin: 20px auto 20px auto;
+}
+aside > h1 {
+  color: orange;
+  font-family: "Lobster", cursive, sans-serif;
+  margin-bottom: 25px;
+}
+aside > h1 > span {
+  display: none;
+  /* visibility: hidden; */
+}
+aside > h3 {
+  font-family: "Lobster", cursive, sans-serif;
+  margin-bottom: 15px;
+}
+aside > p {
+  font-family: sans-serif;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+/* header {
+  font-size: 1.5rem;
+  font-family: "Lobster", cursive, sans-serif;
+  height: 50px;
+  /* background-color: grey; * /
+  text-align: center;
+  color: orange;
+  padding: 10px;
+} */
+main {
+  font-size: 2rem;
+  margin: 5px auto auto auto;
+  width: 340px;
+  height: 570px;
+  padding: 10px;
+  margin-top: 35px;
+  background-color: #ffdd5e;
+  box-shadow: 4px 5px 10px 2px rgba(0, 0, 0, 0.527);
+  /* border: 2px solid black; */
+  border-radius: 20px;
+  display: grid;
+  grid-gap: 10px 10px;
+  /* align-items: center;
+  justify-content: center; */
+  align-self: start;
+  grid-template-rows: 3fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "Display Display Display Display"
+    "clear per plus-minus backspace"
+    "seven eight nine div"
+    "four five six mul"
+    "one two three diff"
+    "zero dot equal sum";
+}
+.input-div {
+  text-align: center;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  vertical-align: middle;
+  background-color: #ffd956;
+  cursor: pointer;
+  box-shadow: -2px -3px 4px rgba(255, 255, 255, 0.199), 2px 3px 4px rgba(0, 0, 0, 0.308);
+  transition: box-shadow, background-color, 0.3s ease;
+}
+.input-div:hover {
+  background-color: rgb(247, 210, 78);
+}
+.input-div:active {
+  box-shadow: none;
+}
+
+.output-display {
+  grid-area: Display;
+  direction: ltr;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-radius: 20px;
+  margin: 25px 0 5px 0;
+  padding: 10px 20px 10px 20px;
+  background: #f3f1f1;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge*/
+  scrollbar-width: none; /* Firefox */
+  /* overflow-wrap: break-word; */
+  box-shadow: inset -2px -2px 2px rgba(255, 255, 255, 0.85), inset 3px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.operand-wrapper {
+  -ms-overflow-style: none; /* IE and Edge*/
+  scrollbar-width: none; /* Firefox */
+  width: 255px;
+  overflow-x: scroll;
+}
+#operator-display {
+  padding-left: 10px;
+}
+/* hiding scrollbar  */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.output-display::-webkit-scrollbar,
+.operand-wrapper::-webkit-scrollbar {
+  display: none;
+}
+#clear-C {
+  grid-area: clear;
+  /* width: auto;
+  border-radius: 50px; */
+}
+#operation-add {
+  grid-area: sum;
+  /* height: auto;
+  line-height: 156px;
+  border-radius: 50px; */
+}
+#backspace {
+  grid-area: backspace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* align-content: center; */
+  line-height: auto;
+}
+#operation-plus-minus {
+  grid-area: plus-minus;
+}
+#operation-per {
+  grid-area: per;
+}
+#operation-mul {
+  grid-area: mul;
+  line-height: 86px;
+}
+#operation-sub {
+  grid-area: diff;
+  line-height: 96px;
+}
+#operation-div {
+  grid-area: div;
+}
+#dot {
+  grid-area: dot;
+  line-height: 50px;
+}
+#equal {
+  grid-area: equal;
+}
+#digit-0 {
+  grid-area: zero;
+}
+#digit-1 {
+  grid-area: one;
+}
+#digit-2 {
+  grid-area: two;
+}
+#digit-3 {
+  grid-area: three;
+}
+#digit-4 {
+  grid-area: four;
+}
+#digit-5 {
+  grid-area: five;
+}
+#digit-6 {
+  grid-area: six;
+}
+#digit-7 {
+  grid-area: seven;
+}
+#digit-8 {
+  grid-area: eight;
+}
+#digit-9 {
+  grid-area: nine;
+}
+
+@media only screen and (min-width: 900px) {
+  .main-body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  main {
+    margin-top: 0;
+  }
+  .wrapper {
+    order: 1;
+    height: 575px;
+    /* margin-top: 0; */
+    width: 50vw;
+    align-self: center;
+  }
+  aside {
+    order: 0;
+    width: 340px;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .main-body {
+    display: none;
+  }
+  .orientation-landscape-mobile {
+    display: block;
+  }
+}

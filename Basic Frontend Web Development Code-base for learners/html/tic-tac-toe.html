@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/images/tic-tac-toe-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/tic-tac-toe.css" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section>
+        <main>
+          <div class="xo-block" id="block-0" onclick="clickedOn(0)"></div>
+          <div class="xo-block" id="block-1" onclick="clickedOn(1)"></div>
+          <div class="xo-block" id="block-2" onclick="clickedOn(2)"></div>
+          <div class="xo-block" id="block-3" onclick="clickedOn(3)"></div>
+          <div class="xo-block" id="block-4" onclick="clickedOn(4)"></div>
+          <div class="xo-block" id="block-5" onclick="clickedOn(5)"></div>
+          <div class="xo-block" id="block-6" onclick="clickedOn(6)"></div>
+          <div class="xo-block" id="block-7" onclick="clickedOn(7)"></div>
+          <div class="xo-block" id="block-8" onclick="clickedOn(8)"></div>
+        </main>
+        <footer class="footer footer1">
+          <div id="before-game-results" onclick="reset()">RESET</div>
+          <div id="after-game-results">
+            <div id="who-won"></div>
+            <div id="reset-after-won" onclick="reset()">RESET</div>
+          </div>
+        </footer>
+        <footer class="footer footer2">
+          <div id="vsplayer" onclick="vsPlayer()">VS Player</div>
+          <div id="vscomputer" onclick="vsComputer()">VS Computer</div>
+        </footer>
+      </section>
+      <hr />
+      <hr />
+      <aside>
+        <header>
+          <img src="../assets/images/tic-tac-toe-icon.png" alt="LOGO" height="64" width="64" />
+          <span>K0X</span>
+        </header>
+        <h3>Rules of the Game</h3>
+        <div>
+          <ul>
+            <li>
+              The game is to be played between two people or a Person and Computer.
+              <hr />
+            </li>
+            <li>One of the player chooses ‘O’ and the other ‘X’ to mark their respective cells.</li>
+            <hr />
+            <li>
+              The game starts with one of the players and the game ends when one of the players has one whole row/ column/ diagonal filled with
+              his/her respective character (‘O’ or ‘X’).
+              <hr />
+            </li>
+            <li>
+              If no one wins, then the game is said to be draw.
+
+              <hr />
+            </li>
+          </ul>
+          <div class="credits">Created by Khanday Ovais on 23<sup>rd</sup> of November 2021.</div>
+        </div>
+      </aside>
+      <hr />
+      <hr />
+    </div>
+    <script src="../js/tic-tac-toe.js"></script>
+  </body>
+</html>

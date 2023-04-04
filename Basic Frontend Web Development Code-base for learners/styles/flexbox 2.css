@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 10px;
+}
+main {
+  border: 2px solid red;
+  background-color: grey;
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*   flex-flow: row wrap; */
+  justify-content: space-between;
+  align-content: flex-end;
+  align-items: flex-start;
+}
+main > div {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 0 2px 2px 0;
+}
+main > div:nth-child(8) {
+  padding: 30px;
+}
+main > div:nth-child(10) {
+  padding: 20px;
+  align-self: flex-end;
+}
+main > div:nth-child(15) {
+  padding: 15px;
+  order: -1;
+  align-self: center;
+}
+main > div:nth-child(18) {
+  padding: 25px;
+  order: 0;
+}
+
+section {
+  border: 2px solid red;
+  min-height: 400px;
+  background-color: grey;
+  margin-top: 10px;
+  padding: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /*   align-items: center; */
+  align-content: center;
+}
+section > div {
+  margin: 15px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px white, -3px -3px 10px black;
+}
+
+.heading {
+  font-size: 110%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+footer {
+  /* display: flex;
+  justify-content: center; */
+  width: 200px;
+  margin: auto;
+}
+footer > a > button {
+  padding: 20px 10px;
+  width: 200px;
+  background-color: grey;
+  color: white;
+  border-style: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 110%;
+}
+footer > a > button:hover {
+  background-color: black;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- !font awesome -->
+    <script src="https://kit.fontawesome.com/db308befc3.js" crossorigin="anonymous"></script>
+    <!-- !favicon
+    <link rel="shortcut icon" href="fas fa-calculator" type="image/x-icon" /> -->
+    <!-- !google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <!-- !external local stylesheet -->
+    <link rel="stylesheet" href="../styles/clac.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="orientation-landscape-mobile">
+      use in portrait orientation<br />otherwise not supported<br />(min-height: 600px)
+    </div>
+    <div class="main-body">
+      <div class="wrapper">
+        <main>
+          <section class="output-display" id="output-display">
+            <div class="operand-wrapper">
+              <div id="operand1-display">Khanday</div>
+              <div id="operand2-display">Ovais</div>
+            </div>
+            <div id="operator-display">{"}</div>
+          </section>
+          <div class="input-div input-clear" id="clear-C" onclick="clickedOn('C')">C</div>
+          <div class="input-div input-equal" id="equal" onclick="clickedOn('=')">=</div>
+          <div class="input-div input-dot" id="dot" onclick="clickedOn('.')">.</div>
+          <div class="input-div input-dot" id="backspace" onclick="clickedOn('backspace')">
+            <span class="fas fa-backspace"></span>
+          </div>
+          <div
+            class="input-div input-operation"
+            id="operation-plus-minus"
+            onclick="clickedOn('+/-')"
+          >
+            +/-
+          </div>
+          <div class="input-div input-operation" id="operation-per" onclick="clickedOn('%')">%</div>
+          <div class="input-div input-operation" id="operation-div" onclick="clickedOn('/')">/</div>
+          <div class="input-div input-operation" id="operation-mul" onclick="clickedOn('*')">*</div>
+          <div class="input-div input-operation" id="operaiton-sub" onclick="clickedOn('-')">-</div>
+          <div class="input-div input-operation" id="operation-add" onclick="clickedOn('+')">+</div>
+          <div class="input-div input-digit" id="digit-0" onclick="clickedOn('0')">0</div>
+          <div class="input-div input-digit" id="digit-1" onclick="clickedOn('1')">1</div>
+          <div class="input-div input-digit" id="digit-2" onclick="clickedOn('2')">2</div>
+          <div class="input-div input-digit" id="digit-3" onclick="clickedOn('3')">3</div>
+          <div class="input-div input-digit" id="digit-4" onclick="clickedOn('4')">4</div>
+          <div class="input-div input-digit" id="digit-5" onclick="clickedOn('5')">5</div>
+          <div class="input-div input-digit" id="digit-6" onclick="clickedOn('6')">6</div>
+          <div class="input-div input-digit" id="digit-7" onclick="clickedOn('7')">7</div>
+          <div class="input-div input-digit" id="digit-8" onclick="clickedOn('8')">8</div>
+          <div class="input-div input-digit" id="digit-9" onclick="clickedOn('9')">9</div>
+        </main>
+      </div>
+      <aside>
+        <h1><span class="fas fa-calculator"></span> OK Calc</h1>
+        <h3>looking for some help?</h3>
+        <p>
+          A calculator is a machine which allows people to do math operations more easily. For
+          example, most calculators will add, subtract, multiply, and divide. Some also do square
+          roots, and more complex calculators can help with calculus and draw function graphs.
+          Calculators are found everywhere. A smartphone or other computer can also act as a
+          calculator.
+        </p>
+        <p>
+          I had made this calculator as a project to sharpen my skills, I know there are exceptions
+          and errors those I didn't caught or solved. But as far as my level is concerned, I think I
+          had done pretty decent job as a beginner.
+        </p>
+      </aside>
+    </div>
+
+    <script src="../js/clac.js"></script>
+  </body>
+</html>
