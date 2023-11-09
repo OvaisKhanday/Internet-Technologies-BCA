@@ -3,4 +3,4 @@ A project based on the concepts taught in the 5th semester of BCA. This is suppo
 
 It actually has three modules the "Basic Frontend Web Development Code-base for learners" module is kind of a basic overview to the field of front-end development. Then comes the "JDBCConnection" module that suffices the need of knowledge of database connectivity. At the end comes the "Internet Technologies" module, which implements the erstwhile modules to build a coherent module, which can be used by students to under the majority of the concepts taught in the 5th semester Internet Technologies subject.
 
---> hope it would help you understand the concepts better. Hope you better a future ahead.
+--> hope it would help you understand the concepts better. --> Hope you have a better future ahead.
